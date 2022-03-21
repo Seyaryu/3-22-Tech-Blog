@@ -22,3 +22,19 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+header {
+  background-color: rgb(47, 14, 12);
+  color: white;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+header a:hover {
+  text-decoration: none;
+  color: white;
+}
