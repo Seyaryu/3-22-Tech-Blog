@@ -1,6 +1,6 @@
-const { Post, Blog } = require('../models');
+const { Post } = require('../models');
 
-const blogData = [
+const postData = [
   {
     "name": "Why MVC is So Important",
     "content": "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the COntroller layer for applicaton Logic",
@@ -18,6 +18,6 @@ const blogData = [
   }
 ]
 
-const seedBlogs = () => Blog.bulkCreate(blogData);
+const seedPosts = () => Post.bulkCreate(postData);
 
-module.exports = seedBlogs;
+module.exports = seedPosts;
