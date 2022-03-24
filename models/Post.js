@@ -11,7 +11,7 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -21,7 +21,7 @@ Post.init(
       defaultValue: DataTypes.NOW,
     },
     content: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {

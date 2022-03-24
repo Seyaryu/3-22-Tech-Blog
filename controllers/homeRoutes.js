@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
   console.log(req.session);
@@ -7,9 +7,9 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'title',
+      'name',
       'created_at',
-      'post_content'
+      'content'
     ],
     include: [
       {
@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      console.log(posts)
       res.render('homepage', {
           posts,
           loggedIn: req.session.loggedIn
@@ -64,9 +65,9 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'title',
+      'name',
       'created_at',
-      'post_content'
+      'content'
     ],
     include: [
       {
