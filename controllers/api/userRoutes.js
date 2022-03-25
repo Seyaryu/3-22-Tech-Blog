@@ -4,14 +4,14 @@ const withAuth = require('../../utils/auth')
 
 router.post('/', (req, res) => {
   User.create({
-    username: req.body.username,
+    name: req.body.name,
     email: req.body.email,
     password: req.body.password,
   })
   .then(dbUserData => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.username;
+      req.session.name = dbUserData.name;
       req.session.loggedIn = true;
   
       res.json(dbUserData);
@@ -40,7 +40,7 @@ router.post('/login', (req, res) => {
     req.session.save(() => {
       // declare session variables
       req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.username;
+      req.session.name = dbUserData.name;
       req.session.loggedIn = true;
 
       res.json({ user: dbUserData, message: 'You are now logged in!' });
