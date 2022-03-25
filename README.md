@@ -15,13 +15,13 @@ This project uses handlebars, express.js, mysql, and sequelize to generate a min
 
 ## Installation
 
-currently, the project is still in the works.  This information will be updated when the app is successuflly launched on heroku.
+The package.json is referenced in the files.  Just type "npm install", and all dependencies will be installed.
 
 ## Usage
 
-Currently, the code errors when trying to seed the database.  Still in the works.
+You can use this app to post, delete, and comment on a live blog.
 
-![Seed Error](./pics/seed_error.PNG)
+![Homepage](./pics/seed_error.PNG)
 
 ## Credits
 
